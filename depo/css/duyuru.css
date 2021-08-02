@@ -1,0 +1,10 @@
+.dkutu { 
+    background-color: #eee;
+    width: 100%;
+} 
+
+.detiket {
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 20px 20px 20px 20px;
+}
