@@ -26,17 +26,17 @@
 <div class="chat">
 <div class="chat-container">
 <div id="call" class="user-bar">
-<div class="back"><a href="index.html"><img src="depo/resimler/back.png" alt="geri" width="30px"></a></div>
+<div class="back"><a href="index.html"><i class="fa fa-arrow-left" style="color: #fcc41d;"></i></a></div>
 <div class="avatar"><img src="depo/resimler/logo.png" alt="Avatar" width="50px"></div>
 <div class="name"><span id="name"></span> <span class="status"></span></div>
-<div class="actions more"><button style="background-color: #000; border: 0px;" onclick="document.location.reload(true)"><img src="depo/resimler/trash.png" alt="hapsini sil" width="30px" /></buttn></div>
+<div class="actions more"><button style="background-color: #000; border: 0px;" onclick="document.location.reload(true)"><i class="fa fa-trash fa-2x" style="color: #fff;"></i></buttn></div>
 <div class="actions attachment"></div>
 <div class="actions"></div>
 </div>
 <div class="conversation">
 <div class="conversation-container"><span id="ap"></span></div>
 <form id="form" class="conversation-compose">
-<div class="emoji"><img id="myBtn" src="https://img.icons8.com/pastel-glyph/4x/code.png" width="30px" alt="kod panosu">
+<div class="emoji"><i id="myBtn" class="fa fa-code fa-2x"></i>
 <div id="myModal" class="modal">
 <div class="modal-content">
 <table id="personel">
@@ -97,7 +97,7 @@
 <input id="val" class="input-msg" name="input" placeholder="mesaj yaz" autocomplete="off" autofocus="0"></input>
 <div class="photo"><img src="depo/resimler/anonim.png" alt="Anonim" width="49px" id="isim" style="border-radius: 5px;"></div>
 <div class="send">
-<div class="circle"><img src="depo/resimler/send.png" width="40px" alt="gönder" id="msend" onclick="sendMessage()"/></div>
+<div class="circle"><i class="fa fa-paper-plane-o" style="color: #fcc41d;margin-right: 8px;" id="msend" onclick="sendMessage()"></i></div>
 </div>
 </form>
 </div>
@@ -107,106 +107,106 @@
 <!-- webhook basla -->
 <script>
 function sendMessage() {
-      var request = new XMLHttpRequest();
+      var request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/858965506450522112/wZfjEme2UHm48jHFZoAF4hka98uAW0p1kK09Ejw-CJr2ij_9VtuQEVpRSVEF9b8KH1qT");
 request.setRequestHeader('Content-type', 'application/json'); 
 
 var myEmbed = {
-  author: {
-  name: document.getElementById("isim").alt,
-  icon_url: document.getElementById("isim").src,
-  },
-  title: "Limona sorulan soru",
-  description: document.getElementById("val").value,
-  footer: {
-  text: "Limon Web uygulaması ile gönderildi"
-  },
-  color: hexToDecimal("#fcc41d")
+  author: {
+  name: document.getElementById("isim").alt,
+  icon_url: document.getElementById("isim").src,
+  },
+  title: "Limona sorulan soru",
+  description: document.getElementById("val").value,
+  footer: {
+  text: "Limon Web uygulaması ile gönderildi"
+  },
+  color: hexToDecimal("#fcc41d")
 } 
 
 var params = {
-  username: "Limon Sohbet",
-  avatarURL: "/depo/resimler/logo.png",
-  embeds: [ myEmbed ]
+  username: "Limon Sohbet",
+  avatarURL: "/depo/resimler/logo.png",
+  embeds: [ myEmbed ]
 } 
 
 request.send(JSON.stringify(params)); 
 
 function hexToDecimal(hex) {
-  return parseInt(hex.replace("#",""), 16)
+  return parseInt(hex.replace("#",""), 16)
 }
 }
-  </script>
+  </script>
 <!-- webhook bitir -->
 <!-- form 1 basla -->
 <script>
-    function formSend1() {
-      var request = new XMLHttpRequest();
+    function formSend1() {
+      var request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/858965506450522112/wZfjEme2UHm48jHFZoAF4hka98uAW0p1kK09Ejw-CJr2ij_9VtuQEVpRSVEF9b8KH1qT");
 request.setRequestHeader('Content-type', 'application/json'); 
 
 var myEmbed = {
-  author: {
-  name: document.getElementById("isim").alt,
-  icon_url: document.getElementById("isim").src,
-  },
-  title: "Yeni kelime formu",
-  description:"`SORU:` " + document.getElementById("soru").value + " `CEVAP:` " +  document.getElementById("cevap").value,
-  footer: {
-  text: "Limon Web uygulaması ile gönderildi"
-  },
-  color: hexToDecimal("#3CBC8D")
+  author: {
+  name: document.getElementById("isim").alt,
+  icon_url: document.getElementById("isim").src,
+  },
+  title: "Yeni kelime formu",
+  description:"`SORU:` " + document.getElementById("soru").value + " `CEVAP:` " +  document.getElementById("cevap").value,
+  footer: {
+  text: "Limon Web uygulaması ile gönderildi"
+  },
+  color: hexToDecimal("#3CBC8D")
 } 
 
 var params = {
-  username: "Limon Sohbet",
-  embeds: [ myEmbed ]
+  username: "Limon Sohbet",
+  embeds: [ myEmbed ]
 } 
 
 request.send(JSON.stringify(params)); 
 
 function hexToDecimal(hex) {
-  return parseInt(hex.replace("#",""), 16)
+  return parseInt(hex.replace("#",""), 16)
 }
-document.getElementById("soru").value = "";
-document.getElementById("cevap").value = "";
+document.getElementById("soru").value = "";
+document.getElementById("cevap").value = "";
 }
-  </script>
+  </script>
 <!-- form 1 bitir -->
 <!-- form 2 basla -->
 <script>
-    function formSend2() {
-      var request = new XMLHttpRequest();
+    function formSend2() {
+      var request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/858965506450522112/wZfjEme2UHm48jHFZoAF4hka98uAW0p1kK09Ejw-CJr2ij_9VtuQEVpRSVEF9b8KH1qT");
 request.setRequestHeader('Content-type', 'application/json'); 
 
 var myEmbed = {
-  author: {
-  name: document.getElementById("isim").alt,
-  icon_url: document.getElementById("isim").src,
-  },
-  title: "Şikayet Formu",
-  description: "`BAŞLIK:` " + document.getElementById("sbaslik").value + " `AÇIKLAMA:` " +  document.getElementById("saciklama").value,
-  footer: {
-  text: "Limon Web uygulaması ile gönderildi"
-  },
-  color: hexToDecimal("#ff0000")
+  author: {
+  name: document.getElementById("isim").alt,
+  icon_url: document.getElementById("isim").src,
+  },
+  title: "Şikayet Formu",
+  description: "`BAŞLIK:` " + document.getElementById("sbaslik").value + " `AÇIKLAMA:` " +  document.getElementById("saciklama").value,
+  footer: {
+  text: "Limon Web uygulaması ile gönderildi"
+  },
+  color: hexToDecimal("#ff0000")
 } 
 
 var params = {
-  username: "Limon Sohbet",
-  embeds: [ myEmbed ]
+  username: "Limon Sohbet",
+  embeds: [ myEmbed ]
 } 
 
 request.send(JSON.stringify(params)); 
 
 function hexToDecimal(hex) {
-  return parseInt(hex.replace("#",""), 16)
+  return parseInt(hex.replace("#",""), 16)
 }
-document.getElementById("sbaslik").value = "";
-document.getElementById("saciklama").value = "";
+document.getElementById("sbaslik").value = "";
+document.getElementById("saciklama").value = "";
 }
-  </script>
+  </script>
 <!-- form 2 bitir -->
 <script>
 $(function() {
@@ -312,7 +312,7 @@ isInArray(bilgi, lastmsg)==true?(smsg="Merhaba ben LİMON, Limon 17/04/2020 de b
 isInArray(gercek, lastmsg)==true?(smsg="Evet", k="evet"):
 isInArray(kim, lastmsg)==true?(smsg="Ben Limon", k=smsg):
 isInArray(kotu, lastmsg)==true?(smsg="Değerli geri bildiriminiz için teşekkürler, bunu iyileştirmeye çalışacağım. 😇", k="Değerli geri bildiriminiz için teşekkürler, bunu iyileştirmeye çalışacağım."):
-isInArray(nap, lastmsg)==true?(k="Seninle sohbet ediyorum ", smsg=k+"😄"):
+isInArray(nap, lastmsg)==true?(k="Özel bir şey yok ya sen? ", smsg=k+"☺️"):
 isInArray(bb, lastmsg)==true?(smsg="Benimle konuşup vakit geçirdiğin için teşekkürler... Hoşçakal", k="Benimle konuşup vakit geçirdiğin için teşekkürler... Hoşçakal", 
 setTimeout(function(){$(".status").html("bugünkü son görülme "+time)},6000),
 setTimeout(function(){$(".status").css("margin-left","-61")},8000)):
@@ -388,55 +388,55 @@ modal.style.display = "none";
 <!-- zar baslat -->
 <script>
 function zar() {
-    var x = document.getElementById("zar")
-    x.innerHTML ="çıkan sayı: " + Math.floor((Math.random() * 6) + 1);
+    var x = document.getElementById("zar")
+    x.innerHTML ="çıkan sayı: " + Math.floor((Math.random() * 6) + 1);
 }
 </script>
 <!-- zar bitir -->
 <!-- isim baslat -->
 <script>
-function setCookie(cname, cvalue) {
-  var expires = "expires=";
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function setCookie(cname, cvalue) {
+  var expires = "expires=";
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 } 
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 } 
 
-function checkCookie() {
-  var user = getCookie("username");
-  if (user != "") {
-    alert("Tekrar hoş geldin " + user);
-  } else {
-    user = prompt("Lütfen isim gir;", "Anonim");
-    if (user != "" && user != null) {
-      setCookie("username", user);
-    }
-  }
-document.getElementById("isim").alt = user; 
+function checkCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+    alert("Tekrar hoş geldin " + user);
+  } else {
+    user = prompt("Lütfen isim gir;", "Anonim");
+    if (user != "" && user != null) {
+      setCookie("username", user);
+    }
+  }
+document.getElementById("isim").alt = user; 
 
-var resim = getCookie("url");
-  if (resim != "") {
-    alert("profil resminiz var");
-  } else {
-    resim = prompt("Lütfen resim url'si gir;", "https://nar-dev.github.io/botlimon/depo/resimler/anonim.png");
-    if (resim != "" && resim != null) {
-      setCookie("url", resim);
-    }
-  }
-document.getElementById("isim").src = resim;
+var resim = getCookie("url");
+  if (resim != "") {
+    alert("profil resminiz var");
+  } else {
+    resim = prompt("Lütfen resim url'si gir;", "https://nar-dev.github.io/botlimon/depo/resimler/anonim.png");
+    if (resim != "" && resim != null) {
+      setCookie("url", resim);
+    }
+  }
+document.getElementById("isim").src = resim;
 }
 </script>
 <!-- isim bitir -->
