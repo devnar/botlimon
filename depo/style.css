@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcc41d;
+}
+
+i {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+}
+
+.send-box {
+    width: calc(100% - 80px);
+    height: 50px;
+    bottom: 0;
+    float: left;
+    position: fixed;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.send-box input {
+    width: calc(100% - 70px);
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    float: left;
+}
+
+#chatContainer {
+    width: calc(100% - 22px);
+    height: 100%;
+    margin-left: 10px;
+}
+
+.message {
+    color: #fff;
+    clear: both;
+    line-height: 18px;
+    font-size: 15px;
+    padding: 8px;
+    position: relative;
+    margin: 8px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.metadata {
+    display: inline-block;
+    padding: 0 0 0 7px;
+    position: relative;
+    bottom: -4px;
+}
+
+.metadata .time {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    display: inline-block;
+}
+
+.received .metadata .time {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.message:first-child {
+    margin: 16px 0 8px;
+}
+
+.message.received {
+    color: #000;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0px 5px 5px 5px;
+    float: left;
+}
+
+.message.received .metadata {
+    padding: 0 0 0 16px;
+}
+
+.message.received:after {
+    border-width: 0px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+    top: 0;
+    left: -10px;
+}
+
+.message.sent {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px 0px 5px 5px;
+    float: right;
+}
+
+.message.sent:after {
+    border-width: 0px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.2);
+    top: 0;
+    right: -10px;
+}
+
+.n-microphone {
+    float: left;
+}
+.n-volume-full {
+    float: left;
+}
+
+.n-paper-plane {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.n-cog {
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.setting {
+    display: none;
+    margin: 10px;
+    float: right;
+    width: calc(100% - 85px);
+    height: calc(100vh - 25px);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.setting div {
+    width: calc(100% - 5px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.setting div input {
+    width: calc(100% - 5px);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; 
+    border-bottom: 2px solid white;
+    outline: none;
+    color: white;
+}
+
+.n-home {
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+::placeholder {
+    color: rgb(228, 226, 226);
+    opacity: 1;
+}
+
+.input {
+    width: 100%; 
+    height: 25px; 
+    box-sizing: border-box; 
+    border: none; 
+    color: white; 
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.button {
+    height: 30px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: none; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 10px;
+}
