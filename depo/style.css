@@ -32,8 +32,7 @@ i {
 }
 
 #chatContainer {
-    width: calc(100% - 22px);
-    height: 100%;
+    width: calc(100% - 20px);
     margin-left: 10px;
 }
 
