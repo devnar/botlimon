@@ -3,11 +3,11 @@
         <title>Limon</title>
         <!-- Meta -->
             <meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1 user-scalable=0">
-            <meta name="description" content="Limon, eğlenmenize ve öğrenmenize yarayacak bir sohbet robotudur.">
+            <meta name="description" content="description">
             <meta name="copyright" content="NAR © 2021 Tüm hakları saklı">
             <meta name="theme-color" content="#23b5b5">
             <meta property="og:title" content="Limon" > 
-            <meta property="og:description" content="Limon, eğlenmenize ve öğrenmenize yarayacak bir sohbet robotudur." /> 
+            <meta property="og:description" content="description" /> 
             <meta property="og:image" content="https://devnar.github.io/logos/limon.png" /> 
         <!-- /robots -->
             <meta name="robots" content="index,follow">
@@ -29,17 +29,22 @@
             <div>
                 <span class="nc-text-white">Arkaplan Rengi:</span><input placeholder="#fcc41d" onchange="color()" id="datacolor"/>
             </div>
+            <div>
+                <input type="button" onclick="cleardata()" value="Verileri temizle"/>
+            </div>
             <i class="n n-home" onclick="nj.show('.cont'); nj.hide('.setting')"></i>
         </div>
         <div class="cont">
             <i class="n n-cog" onclick="nj.show('.setting'); nj.hide('.cont')"></i>
             <div class="chat-box">
                 <div id="chatContainer"></div>
-                    <div class="send-box">
-                        <i class="n n-microphone" onclick="runSpeechRecognition()"></i>
-                        <input id="val" placeholder="Limonla konuşmak için yaz..." autocomplete="off"/>
-                    </div>
-                    <i class="n n-paper-plane" id="msend" onclick="send()"></i>
+                <div class="send-box">
+                    <i class="n n-microphone" onclick="runSpeechRecognition()"></i>
+                    <form onsubmit="send()" method="dialog">
+                        <input id="val" placeholder="Limonla konuşmak için yaz..." autocomplete="off" autofocus required/>
+                    </form>
+                </div>
+                <i class="n n-paper-plane" id="msend" onclick="send()"></i>
                 <script src="depo/script.js"></script>
             </div>
         </div>
