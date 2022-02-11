@@ -46,7 +46,7 @@ function send() {
     var ig=["iyi geceler","uykuluyum","iyi uykular","iyi geceler limon"];
     var guzel=["güzel çalışıyor","güzel kod","güzel","vay","vayy","vayyy","çalışıyor","mükemmel","harika","güzel","muhteşem","iyi","aman allahım","uwu","seninle tanışmak güzel","seni görmek güzel","harikasin"];
     var tun=["tünaydın","tünaydınlar","tünaydın limon"];
-    var nasil=["nasılsın","iyi misin", "nasılsın?", "iyi misin?","sen nasılsın","sen nasılsın?","naber","naber?"];
+    var nasil=["nasılsın","iyi misin", "nasılsın?", "iyi misin?","sen nasılsın","sen nasılsın?","naber","naber?","ne haber","ne haber?"];
     var nap=["napıyon?","ne yapıyorsun","ne yapıyon", "napıyorsun","ne yapıyorsun?"];
     var iyi=["iyi","👍🏻", ":)","c:","😀","😁","😃","😄","😆","😊","🙂","😉","ben de","evet","işte bu","iyi sen?","iyi sen","iyiyim"];
     var ses=["limon","knk","hey","sen","ordaki","oradaki"]
