@@ -19,6 +19,7 @@
             <link rel="stylesheet" href="depo/style.css">
         <!-- Script -->
             <script src="https://devnar.github.io/lib/all.js"></script>
+            <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
         <!-- Style -->
     </head>
     <body id="body" onload="name()">
@@ -28,6 +29,10 @@
             </div>
             <div>
                 <span class="nc-text-white">Arkaplan Rengi:</span><input placeholder="#fcc41d" onchange="color()" id="datacolor"/>
+            </div>
+            <div>
+                <span class="nc-text-white">Not kutusu:</span>
+                <textarea placeholder="Buraya not alabilirsin" onchange="note()" id="datanote"></textarea>
             </div>
             <div>
                 <input type="button" onclick="cleardata()" value="Verileri temizle"/>
@@ -41,7 +46,7 @@
                 <div class="send-box">
                     <i class="n n-microphone" onclick="runSpeechRecognition()"></i>
                     <form onsubmit="send()" method="dialog">
-                        <input id="val" placeholder="Limonla konuşmak için yaz..." autocomplete="off" autofocus required/>
+                        <input id="val" placeholder="Limonla konuşmak için yaz..." autocomplete="off" autofocus/>
                     </form>
                 </div>
                 <i class="n n-paper-plane" id="msend" onclick="send()"></i>
