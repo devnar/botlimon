@@ -37,19 +37,19 @@
             <div>
                 <input type="button" onclick="cleardata()" value="Verileri temizle"/>
             </div>
-            <i class="n n-home" onclick="nj.show('.cont'); nj.hide('.setting')"></i>
+            <i class="icon n-home" onclick="nj.show('.cont'); nj.hide('.setting')"></i>
         </div>
         <div class="cont">
-            <i class="n n-cog" onclick="nj.show('.setting'); nj.hide('.cont')"></i>
+            <i class="icon n-cog" onclick="nj.show('.setting'); nj.hide('.cont')"></i>
             <div class="chat-box">
                 <div id="chatContainer"></div>
                 <div class="send-box">
-                    <i class="n n-microphone" onclick="runSpeechRecognition()"></i>
+                    <i class="icon n-microphone" onclick="runSpeechRecognition()"></i>
                     <form onsubmit="send()" method="dialog">
                         <input id="val" placeholder="Limonla konuşmak için yaz..." autocomplete="off" autofocus/>
                     </form>
                 </div>
-                <i class="n n-paper-plane" id="msend" onclick="send()"></i>
+                <i class="icon n-paper-plane" id="msend" onclick="send()"></i>
                 <script src="depo/script.js"></script>
             </div>
         </div>
