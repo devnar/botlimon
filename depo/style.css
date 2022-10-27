@@ -108,14 +108,14 @@ i {
     right: -10px;
 }
 
-.n-microphone {
+.ns-microphone {
     float: left;
 }
 .n-volume-full {
     float: left;
 }
 
-.n-paper-plane {
+.ns-paper-plane {
     right: 0;
     bottom: 0;
     position: fixed;
@@ -124,7 +124,7 @@ i {
     border-radius: 20px;
 }
 
-.n-cog {
+.ns-cog {
     left: 0;
     top: 0;
     position: fixed;
@@ -177,7 +177,7 @@ i {
     color: white;
 }
 
-.n-home {
+.ns-home {
     left: 0;
     top: 0;
     position: fixed;
