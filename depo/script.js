@@ -44,6 +44,7 @@ function send() {
     var m = d.getMinutes();
 
     /* kelimeler */
+    var test = ["test"]
     var mrb = ["merhaba","merhaba limon","selam","selam limon","slm","mrb"];
     var gw = ["ara","arama yap","limon ara","limon arama yap","benim için ara","benim için arama yap"];
     var pki = ["ya tamam üzülme","ya üzülme","napim","ne yapayım","üzülme","boş yapma","boş yapma!"];
@@ -94,6 +95,7 @@ function send() {
         isInArray(nasil, msg.value.toLowerCase())==true?(box.innerHTML += "<div class='message received'> İyiyim Peki sen? <span class='metadata'> <span class='time'>" + h +":"+ m +"</span></span></div>", msg.value = "", responsiveVoice.speak("İyiyim Peki sen?","Turkish Male"), msg.focus()):
         isInArray(nap, msg.value.toLowerCase())==true?(box.innerHTML += "<div class='message received'> Senle konuşuyorum 😉 <span class='metadata'> <span class='time'>" + h +":"+ m +"</span></span></div>", msg.value = "", responsiveVoice.speak("Senle konuşuyorum 😉","Turkish Male"), msg.focus()):
         isInArray(pki, msg.value.toLowerCase())==true?(box.innerHTML += "<div class='message received'> peki <span class='metadata'> <span class='time'>" + h +":"+ m +"</span></span></div>", msg.value = "", responsiveVoice.speak("peki!","Turkish Male"), msg.focus()):
+        isInArray(test, msg.value.toLowerCase())==true?(box.innerHTML += "<div class='message received'> Test etmene gerek yok, bana inan <span class='metadata'> <span class='time'>" + h +":"+ m +"</span></span></div>", msg.value = "", responsiveVoice.speak("test etmene gerek yok bana inan","Turkish Male"), msg.focus()):
         (box.innerHTML += "<div class='message received'>üzgünüm ama anlamadım<br><b align='center'>Bana bu kelimeyi öğretir misin?</b><br><br><a href='https://forms.gle/XmhwgsUBqK8Et1vD7' target='_blank' class='button'>İsterim</a><span class='metadata'> <span class='time'>" + h +":"+ m +"</span></span></div>", msg.value = "", responsiveVoice.speak("Bana bu kelimeyi öğretsene","Turkish Male"), msg.focus());
     }
 }
