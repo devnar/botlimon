@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 /* 
 ===================
@@ -20,12 +20,12 @@ Globals
   --zinc-900: #18181b;
   --reef: #5c7080;
   --shark: #1a1e22;
-  --ocean: #3276ea;
-  --ocean-light: #c8dbf4;
+  --lemon: #fcc41d;
+  --lemon-light: #fff3ce;
   --sky: #f0f9ff;
 
-  --indigo-500: #6366f1;
-  --indigo-600: #4f46e5;
+  --indigo-500: rgba(0, 0, 0, 0.2);
+  --indigo-600: rgba(0, 0, 0, 0.5);
 
   --spacing-x-small: 0.125rem;
   --spacing-small: 0.25rem;
@@ -110,8 +110,8 @@ Header
 }
 
 .bpw-header-name {
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 800;
+  font-size: 1rem;
   color: var(--zinc-600);
 }
 
@@ -184,7 +184,7 @@ Composer
   padding: 0;
   line-height: 0;
   position: relative;
-
+  background-color: var(--bg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +566,7 @@ Footer
   border: 0.5px solid #d4d4d8;
   box-shadow: 0 1px 4px #0017e617;
   border-radius: var(--spacing-xx-large);
-  color: var(--ocean);
+  color: var(--lemon);
   padding: var(--spacing-small) var(--spacing-medium);
   width: min-content;
   height: min-content;
@@ -663,12 +663,12 @@ Footer
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
-  color: var(--ocean-light);
+  color: var(--lemon-light);
   text-decoration: none;
 }
 .bpw-bubble-file a:hover,
 .bpw-bubble-image a:hover {
-  color: var(--ocean);
+  color: var(--lemon);
 }
 
 .bpw-bubble-image a img,
@@ -772,7 +772,7 @@ Footer
 
 .bpw-card-action {
   font-weight: 300;
-  color: var(--ocean-light);
+  color: var(--lemon-light);
   padding: 0 10px;
   display: block;
   cursor: pointer;
@@ -782,7 +782,7 @@ Footer
   border: none;
 }
 .bpw-card-action:hover {
-  color: var(--ocean);
+  color: var(--lemon);
   text-decoration: none !important;
 }
 
