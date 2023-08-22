@@ -202,7 +202,6 @@ Composer
   color: var(--zinc-900);
   font-family: 'Nunito', sans-serif;
   font-size: 0.75rem;
-  height: 54px;
   padding: 19px var(--spacing-large) var(--spacing-large);
   resize: none;
   transition: border 0.2s;
